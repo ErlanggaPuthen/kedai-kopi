@@ -5,6 +5,7 @@ export interface Produk {
   kategori: 'Kopi' | 'Non-Kopi' | 'Pastry & Camilan';
   deskripsi: string;
   badge?: string;
+  icon: string;
 }
 
 export interface ItemKeranjang {
