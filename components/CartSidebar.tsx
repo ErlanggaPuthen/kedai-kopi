@@ -37,7 +37,7 @@ export default function CartSidebar({ keranjang, temaGelap, ubahJumlah, totalHar
         ) : (
           keranjang.map((item) => (
             <div key={item.produk.id} className="flex items-center justify-between text-xs py-1.5">
-              <div className="max-w-[140px]">
+              <div className="max-w-35">
                 <p className={`font-semibold truncate ${temaGelap ? 'text-stone-200' : 'text-stone-800'}`}>{item.produk.nama}</p>
                 <p className="text-stone-400">{formatRupiah(item.produk.harga)}</p>
               </div>
