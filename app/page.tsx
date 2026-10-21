@@ -64,13 +64,13 @@ export default function CoffeeShopApp() {
         }`}>
           <div className="relative z-10 max-w-lg">
             <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">
-              ✨ Spesial Hari Ini
+              ✨ Spesial Setiap Hari Jum'at!
             </span>
             <h2 className="text-3xl md:text-4xl font-black text-white leading-tight mb-4">
               Awali harimu dengan secangkir semangat.
             </h2>
             <p className="text-amber-100/80 text-sm md:text-base leading-relaxed">
-              Dapatkan diskon 20% untuk semua varian Artisan Tea. Pesan sekarang tanpa perlu antre di kasir.
+              Dapatkan dengan harga 15.000 untuk all varian. Pesan sekarang tanpa perlu antri di kasir.
             </p>
           </div>
           {/* Dekorasi Abstrak di dalam Banner */}
