@@ -12,10 +12,10 @@ export default function Header({ totalItem, temaGelap, onToggleTema }: HeaderPro
       <div className="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
         <div className="flex flex-col">
           <h1 className="text-2xl font-black tracking-tighter bg-linear-to-r from-amber-600 via-orange-500 to-rose-500 bg-clip-text text-transparent">
-            Ruang Seduh.
+            Al Jinan Coffee
           </h1>
           <p className={`text-[10px] font-medium uppercase tracking-widest mt-0.5 ${temaGelap ? 'text-stone-400' : 'text-stone-500'}`}>
-            Artisan Coffee & Pastry
+            Coffee & Pastry
           </p>
         </div>
 
