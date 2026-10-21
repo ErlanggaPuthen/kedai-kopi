@@ -6,38 +6,37 @@ interface HeaderProps {
 
 export default function Header({ totalItem, temaGelap, onToggleTema }: HeaderProps) {
   return (
-    <header className={`sticky top-0 z-30 backdrop-blur-md border-b transition-colors ${
-      temaGelap ? 'bg-stone-900/90 border-stone-800' : 'bg-white/90 border-stone-200'
+    <header className={`sticky top-0 z-30 backdrop-blur-xl transition-colors duration-300 ${
+      temaGelap ? 'bg-stone-950/70 border-b border-white/10' : 'bg-white/70 border-b border-stone-200/50'
     }`}>
-      <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <div>
-          <h1 className={`text-xl font-bold tracking-tight transition-colors ${
-            temaGelap ? 'text-amber-500' : 'text-amber-900'
-          }`}>
-            Ruang Seduh
+      <div className="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
+        <div className="flex flex-col">
+          <h1 className="text-2xl font-black tracking-tighter bg-linear-to-r from-amber-600 via-orange-500 to-rose-500 bg-clip-text text-transparent">
+            Ruang Seduh.
           </h1>
-          <p className={`text-xs ${temaGelap ? 'text-stone-400' : 'text-stone-500'}`}>
-            Pesan Menu Kopi & Kudapan Favorit
+          <p className={`text-[10px] font-medium uppercase tracking-widest mt-0.5 ${temaGelap ? 'text-stone-400' : 'text-stone-500'}`}>
+            Artisan Coffee & Pastry
           </p>
         </div>
 
         <div className="flex items-center gap-3">
           <button
             onClick={onToggleTema}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold border transition-all cursor-pointer ${
+            className={`w-10 h-10 flex items-center justify-center rounded-full text-lg transition-all duration-300 hover:scale-110 active:scale-90 ${
               temaGelap
-                ? 'bg-stone-800 border-stone-700 text-yellow-400 hover:bg-stone-700'
-                : 'bg-stone-50 border-stone-200 text-stone-700 hover:bg-stone-100 shadow-sm'
+                ? 'bg-stone-800 text-yellow-400 hover:shadow-[0_0_15px_rgba(250,204,21,0.2)]'
+                : 'bg-stone-100 text-amber-500 hover:shadow-md'
             }`}
           >
-            <span>{temaGelap ? '🌙 Gelap' : '☀️ Terang'}</span>
+            {temaGelap ? '🌙' : '☀️'}
           </button>
 
-          <span className={`text-xs font-semibold px-2.5 py-1 rounded-full shadow-sm transition-colors ${
-            temaGelap ? 'bg-amber-950/80 text-amber-300 border border-amber-800' : 'bg-amber-100 text-amber-800'
+          <div className={`flex items-center gap-2 px-4 py-2 rounded-full font-bold text-xs shadow-sm transition-all ${
+            temaGelap ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30' : 'bg-amber-100 text-amber-800'
           }`}>
-            {totalItem} item dipilih
-          </span>
+            <span>🛒</span>
+            <span>{totalItem} item</span>
+          </div>
         </div>
       </div>
     </header>
